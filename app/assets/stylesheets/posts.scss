@@ -1,0 +1,28 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.stylees  a{
+    font-size: 20px;
+    text-decoration: none;
+    background-color: teal;
+    color: white;
+    padding: 3px 10px;
+}
+.stylees {
+    background-color: teal;
+}
+
+.whole {
+    background-color: rgb(169, 240, 236);
+}
+
+.stylees  a:hover{
+    text-decoration: none;
+    background-color: rgb(119, 141, 141);
+    color: white;
+}
+
+.container {
+    background-color: rgb(169, 240, 236);
+}
