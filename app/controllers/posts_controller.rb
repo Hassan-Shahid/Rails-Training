@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @posts = Post.all.order("created_at DESC")
   end
+
   def new
     @post = Post.new
   end
+
   def create
     @post = Post.new(parameters)
     if @post.save
@@ -33,13 +34,14 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
+    flash[:notice] = "Successfully Deleted."
     redirect_to root_path
   end
 
   private
 
     def find_post
-      @post = Post.find(params[:id])
+      @post = Post.find_by_id(params[:id])
     end
 
     def parameters
